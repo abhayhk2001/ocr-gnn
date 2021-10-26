@@ -674,7 +674,7 @@ class Graph:
             target[:feat_arr.shape[0], :feat_arr.shape[1]] = feat_arr
 
         elif self.max_nodes < feat_arr.shape[0]:
-            target = feat_arr[:self.max_nodes, feat_arr.shape[1]]
+            target = feat_arr[:self.max_nodes, feat_arr.shape[1]-1]
 
         else:
             target = feat_arr
